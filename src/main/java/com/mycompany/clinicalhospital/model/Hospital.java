@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public class Hospital {
     private String nombre;
     private String ciudad;
-    private ArrayList<Consulta> consultas;
+    private ArrayList<Consulta> consultas = new ArrayList<>();
     
-    Hospital(){
+    public Hospital(){
         
     }
 
@@ -51,9 +51,8 @@ public class Hospital {
     }
     
     //reglas del negocio
-    public Consulta registrarConsulta(Consulta c){
+    public void registrarConsulta(Consulta c){
         consultas.add(c);
-        return c;
     }
     
     public Consulta getConsulta(int i){

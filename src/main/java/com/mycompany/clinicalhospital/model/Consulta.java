@@ -50,9 +50,17 @@ public class Consulta {
         this.diagnostico = diagnostico;
     }
 
+    public int getDuracionMinutos() {
+        return duracionMinutos;
+    }
+
+    public void setDuracionMinutos(int duracionMinutos) {
+        this.duracionMinutos = duracionMinutos;
+    }
+    
     @Override
     public String toString() {
-        return "\n\tHistoria Clinica\n\tConsulta\nFecha: " + fecha + 
+        return "\n\n\tHistoria Clinica\n\tConsulta\nFecha: " + fecha + 
                 "\nMotivo: " + motivo + 
                 "\nDiagnostico: " + diagnostico +
                 "\nDuracion: " + duracionMinutos + "Min";

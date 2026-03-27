@@ -11,6 +11,7 @@ import com.mycompany.clinicalhospital.model.Persona;
  *
  * @author Andres Felipe Torres Padilla
  */
+
 public class Medico extends Persona{
     private String especialidad;
     private String tarjetaProfesional;
@@ -19,10 +20,12 @@ public class Medico extends Persona{
     public Medico() {
     }
 
-    public Medico(String nombre, int edad, String cedula, String telefono, String especialidad, String tarjetaProfesional) {
+    public Medico(String nombre, int edad, String cedula, String telefono, String especialidad, 
+            String tarjetaProfesional, int consultorio) {
         super(nombre, edad, cedula, telefono);
         this.especialidad = especialidad;
         this.tarjetaProfesional = tarjetaProfesional;
+        this.consultorio = consultorio;
     }
 
     public String getEspecialidad() {
@@ -42,7 +45,7 @@ public class Medico extends Persona{
     }
     
     public void atender(Consulta c){
-        System.out.println(c.toString());
+        System.out.println(toString() + c.toString());
     }
 
     public int getConsultorio() {
