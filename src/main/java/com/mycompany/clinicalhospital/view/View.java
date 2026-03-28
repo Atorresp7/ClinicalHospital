@@ -23,25 +23,10 @@ public class View {
         
         
         //creacion de consultas
-        Consulta c = new Consulta();
-        
-        c.setFecha("03/06/2020");
-        c.setMotivo("Dolor de muelas");
-        c.setDiagnostico("Caries");
-        c.setDuracionMinutos(30);
-        hospital.registrarConsulta(new Consulta(c.getFecha(),c.getMotivo(),c.getDiagnostico(),c.getDuracionMinutos()));
-        
-        c.setFecha("01/01/2025");
-        c.setMotivo("Dolor de cabeza frecuente");
-        c.setDiagnostico("Migraña");
-        c.setDuracionMinutos(15);
-        hospital.registrarConsulta(new Consulta(c.getFecha(),c.getMotivo(),c.getDiagnostico(),c.getDuracionMinutos()));
-        
-        c.setFecha("015/10/2025");
-        c.setMotivo("Tos persistente");
-        c.setDiagnostico("Bronquitis");
-        c.setDuracionMinutos(15);
-        hospital.registrarConsulta(new Consulta(c.getFecha(),c.getMotivo(),c.getDiagnostico(),c.getDuracionMinutos()));
+        Consulta c = new Consulta();       
+        hospital.registrarConsulta(new Consulta("03/06/2020","Dolor de muelas","Caries",30));      
+        hospital.registrarConsulta(new Consulta("01/01/2025","Dolor de cabeza frecuente","Migraña",15));
+        hospital.registrarConsulta(new Consulta("15/10/2025","Tos persistente","Bronquitis",15));
         
         //creacion de medico
         Medico m1 = new Medico("Carlos",40, "1005489257", "3152020350", "Medicina Interna", "Vigente", 15);
@@ -63,7 +48,7 @@ public class View {
         m2.setTarjetaProfesional("Vencida");
         
         
-        System.out.println("El Medico: " + m2.getNombre()+ "Tiene Tarjeta profesional" + m2.getTarjetaProfesional());
+        System.out.println("El Medico: " + m2.getNombre()+ " tiene Tarjeta profesional" + m2.getTarjetaProfesional());
         System.out.println("Luego de estudios se diagostico : "+ hospital.getConsulta(2).getDiagnostico());
         
     }
